@@ -4,9 +4,7 @@ angular.module('fireAdventures')
     $scope.adventurers = Users.all;
     $scope.testimonials = Testimonials.all;
 
-    Session.getSession().then(function (session) {
-      $scope.session = session;
-    });
+    setSession();
 
     authCtrl.user = {
       username: '',
@@ -16,6 +14,8 @@ angular.module('fireAdventures')
 
     authCtrl.login = function() {
       Auth.$authWithOAuthPopup('twitter').then(function(authData) {
+        setSession();
+
         authCtrl.user.username = authData.twitter.username;
         authCtrl.user.displayName = authData.twitter.displayName;
         authCtrl.user.profileImageURL = authData.twitter.profileImageURL;
@@ -28,6 +28,12 @@ angular.module('fireAdventures')
 
       }).catch(function(error) {
         authCtrl.error = error;
+      });
+    }
+
+    function setSession() {
+      Session.getSession().then(function (session) {
+        $scope.session = session;
       });
     }
   });
