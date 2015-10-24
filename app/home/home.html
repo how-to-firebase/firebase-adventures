@@ -1,0 +1,34 @@
+<div id="main">
+  <section>
+    <header class="major">
+      <img src="images/gdg_devfest_2015_logo_color.png" width="100">
+      <h2>Firebase Adventures</h2>
+    </header>
+    <p>Firebase Adventures is a journey about how to use Firebase in different ways to give you the ability to build extraordinary cross-platform apps.</p>
+
+    <ul class="user-list" ng-show="adventurers">
+      <li ng-repeat="adventurer in adventurers">
+        <a ng-href="http://twitter.com/{{adventurer.username}}" target="blank">
+          <img ng-src="{{adventurer.profileImageURL}}" alt=""  class="image avatar">
+        </a>
+      </li>
+    </ul>
+
+    <ul class="actions" n`g-show="!session">
+    <ul class="actions">
+      <li><a href="#" class="button" ng-click="authCtrl.login()">Join this Adventure →</a></li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <a href="#/testimonials" class="button send-feedback" ng-show="session">Send your feedback →</a>
+    <h2>What people are saying?</h2>
+
+    <ul class="testimonials-list">
+      <li ng-repeat="testimonial in testimonials | orderBy:'id':true">
+        <blockquote>{{testimonial.feedback}}</blockquote>
+        <img ng-src="{{testimonial.profileImageURL}}" alt="" class="image avatar"> <cite>{{testimonial.displayName}}</cite>
+      </li>
+    </ul>
+  </section>
+</div>

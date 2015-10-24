@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Firebase Adventures</title>
+    <meta name="description" content="Firebase Adventures is a journey about how to use Firebase in different ways to give you the ability to build extraordinary cross-platform apps.">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="fireAdventures">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header id="header">
+      <a ui-sref="home" class="image avatar"><img src="https://lh3.googleusercontent.com/-jv_FNldylnI/AAAAAAAAAAI/AAAAAAAAc7M/SfffDzR4ilE/s120-c/photo.jpg" alt="" /></a>
+      <h1><strong>Juarez Filho</strong>, Front end Engineer<br />
+      building things with love at <strong>@madewithlove</strong><br />
+      talking about Web across the world.</h1>
+    </header>
+
+    <ui-view></ui-view>
+
+    <footer id="footer">
+      <ul class="icons">
+      <li><a href="http://google.com/+JuarezPAFilho" class="icon fa-google"><span class="label">Google Plus</span></a></li>
+        <li><a href="http://twitter.com/juarezpaf" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="http://github.com/juarezpaf" class="icon fa-github"><span class="label">Github</span></a></li>
+        <li><a href="mailto:juarezpaf@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-md5/angular-md5.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="app.js"></script>
+    <script src="auth/auth.controller.js"></script>
+    <script src="auth/auth.service.js"></script>
+    <script src="auth/session.service.js"></script>
+    <script src="users/users.service.js"></script>
+    <script src="testimonials/testimonials.controller.js"></script>
+    <script src="testimonials/testimonials.service.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
